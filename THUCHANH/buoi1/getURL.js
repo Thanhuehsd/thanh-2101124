@@ -1,8 +1,9 @@
-var url = require('url')
-const getPath = (req) =>{
+import { parse } from 'url';
+
+export const getPath = (req) => {
     return req.url;
-}
-const getParamsURL = (req) =>{
-    return JSON.stringify((url.parse(req.url, true)).query);
-}
-module.exports ={getPath,getParamsURL}
+};
+
+export const getParamsURL = (req) => {
+    return JSON.stringify(parse(req.url, true).query);
+};

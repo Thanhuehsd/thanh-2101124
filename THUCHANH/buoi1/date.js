@@ -1,4 +1,5 @@
-const myDateTime = (str="Ngày hiện tại:") =>{
-    return str + Date()
-}
-module.exports = myDateTime
+const myDateTime = (str = "Ngày hiện tại:") => {
+    return str + Date();
+};
+
+export default myDateTime;
